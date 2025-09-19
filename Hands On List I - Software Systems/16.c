@@ -14,11 +14,12 @@ Date: September 6th, 2025
 #include <unistd.h>
 #include <fcntl.h>
 #include <string.h>
+#include <sys/file.h>
 
 void lock_file(int fd, short lock_type) {
     struct flock fl;
     fl.l_type = lock_type;       
-    fl.l_whence = SEEK_SET;      
+    fl.l_whence = SEEK_SET;    // from where to aly lock    
     fl.l_start = 0;              
     fl.l_len = 0;                
     fl.l_pid = getpid();

@@ -2,8 +2,7 @@
 
 Name: 28.c
 Author: Aniket Kumar
-Decsription: Write a program to create three child processes. 
-            The parent should wait for a particular child (use waitpid system call).
+Decsription: Write a program to get maximum and minimum real time priority.
 Date: September 5th, 2025
 
 */

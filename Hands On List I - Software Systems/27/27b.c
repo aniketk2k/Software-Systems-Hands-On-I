@@ -5,7 +5,8 @@ Author: Aniket Kumar
 Decsription: Write a program to execute ls -Rl by the following system calls
             a. execl
             b. execlp
-            c. execled. execv
+            c. execle
+            d. execv
             e. execvp
 Date: September 7th, 2025
 

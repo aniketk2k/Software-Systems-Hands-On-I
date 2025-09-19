@@ -9,12 +9,12 @@ Date: September 5th, 2025
 
 
 #include <stdio.h>
-#include <stdint.h>
+#include <stdint.h>     
 #include <unistd.h>
 
 static __inline__ uint64_t rdtsc(void) {
     unsigned int hi, lo;
-    __asm__ __volatile__ ("rdtsc" : "=a"(lo), "=d"(hi));
+    __asm__ __volatile__ ("rdtsc" : "=a"(lo), "=d"(hi));    
     return ((uint64_t)hi << 32) | lo;
 }
 
@@ -22,7 +22,7 @@ int main() {
     uint64_t low, high;
     pid_t pid;
 
-    low = rdtsc();          
+    low = rdtsc();          // read time stamp counter
     pid = getpid();           
     high = rdtsc();            
 

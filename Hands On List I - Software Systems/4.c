@@ -17,7 +17,7 @@ Date: September 6th, 2025
 int main() {
     int fd;
 
-    fd = open("myfile.txt", O_RDWR);
+    fd = open("testfile.txt", O_RDWR);
     printf("Opened existing file 'testfile.txt' with FD = %d\n", fd);
     close(fd);
 

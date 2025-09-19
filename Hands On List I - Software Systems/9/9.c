@@ -2,8 +2,17 @@
 
 Name: 8.c
 Author: Aniket Kumar
-Decsription: Write a program to open a file in read only mode, read line by line and display each line as it is read.
-            Close the file when end of file is reached.
+Decsription: Write a program to print the following information about a given file.
+                a. inode
+                b. number of hard links
+                c. uid
+                d. gid
+                e. size
+                f. block size
+                g. number of blocks
+                h. time of last access
+                i. time of last modification
+                j. time of last change
 Date: September 6th, 2025
 
 */

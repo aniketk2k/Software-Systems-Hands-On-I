@@ -14,7 +14,7 @@ Date: September 7th, 2025
 #include <unistd.h>
 #include <sys/select.h>
 
-int main() {
+int main(){
     fd_set set;
     struct timeval timeout;
     int ret;

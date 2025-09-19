@@ -18,6 +18,7 @@ int main() {
 
     // Execute ./hello with argument "Aniket"
     execl("./hello", "hello", "Aniket", NULL);
+    //  ./temp works here
     perror("execl failed");
     return 1;
 }

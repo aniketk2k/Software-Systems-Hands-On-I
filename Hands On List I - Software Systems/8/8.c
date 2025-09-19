@@ -20,6 +20,11 @@ int main(int argc, char *argv[]) {
     int fd;
     char ch;
     ssize_t n;
+    /*
+    char buf[bsize];
+    char line[bsize];
+    int idx = 0;
+    */
 
     if(argc != 2){
         fprintf(stderr, "Usage: %s <filename>\n", argv[0]);
@@ -29,6 +34,18 @@ int main(int argc, char *argv[]) {
     fd = open(argv[1], O_RDONLY);
     printf("Reading file: %s\n\n", argv[1]);
 
+    /*
+    while((n = read(fd, buf, sizeof(buf))) > 0) {
+        for(int i = 0; i < n; i++) {
+            line[idx++] = buf[i];
+            if(buf[i] == '\n') {        // end of line
+                line[idx] = '\0';       // null terminate string
+                printf("%s", line);     // print complete line
+                idx = 0;                // reset for next line
+            }
+        }
+    }
+    */
     while((n = read(fd, &ch, bsize)) > 0) 
         write(STDOUT_FILENO, &ch, n);  
 
